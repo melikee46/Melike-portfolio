@@ -1,0 +1,11 @@
+{
+  "nav": {
+    "home": "home",
+    "about": "about",
+    "work": "work",
+    "interests": "interests",
+    "volunteering": "volunteering",
+    "blog": "blog",
+    "contact": "contact"
+  }
+}

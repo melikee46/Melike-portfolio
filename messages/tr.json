@@ -1,0 +1,11 @@
+{
+	"nav": {
+		"home": "Ana sayfa",
+		"about": "Hakkımda",
+		"work": "Deneyim ve eğitim",
+		"interests": "İlgi alanları",
+		"volunteering": "Gönüllülük",
+		"blog": "Blog",
+		"contact": "İletişim"
+	}
+}
