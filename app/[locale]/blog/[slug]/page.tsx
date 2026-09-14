@@ -2,6 +2,8 @@ import { MDXRemote } from 'next-mdx-remote/rsc';
 import { notFound } from 'next/navigation';
 import { getPostBySlug } from '@/lib/mdx';
 
+export const dynamic = 'force-dynamic';
+
 export default function BlogPostPage({
   params: { locale, slug },
 }: {

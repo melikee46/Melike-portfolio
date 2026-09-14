@@ -1,11 +1,13 @@
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import LocaleSwitcher from '../../components/LocaleSwitcher';
 import '../globals.css';
 
 const locales = ['tr', 'en'];
+
+export const dynamic = 'force-dynamic';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -27,6 +29,7 @@ export default async function LocaleLayout({
     notFound();
   }
 
+  setRequestLocale(locale);
   const messages = await getMessages();
   const t = locale === 'tr'
     ? { home: 'anasayfa', about: 'hakkımda', work: 'deneyim', interests: 'ilgi alanları', volunteering: 'gönüllülük', blog: 'günlük', contact: 'iletişim' }

@@ -3,13 +3,15 @@ import { notFound } from 'next/navigation';
 
 const locales = ['tr', 'en'];
 
-export default getRequestConfig(async ({ locale }) => {
-  if (!locales.includes(locale as string)) {
+export default getRequestConfig(async ({ requestLocale }) => {
+  const locale = await requestLocale;
+
+  if (!locale || !locales.includes(locale)) {
     notFound();
   }
 
   return {
-    locale: locale as string,
+    locale,
     messages: (await import(`./messages/${locale}.json`)).default,
   };
 });
