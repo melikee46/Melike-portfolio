@@ -32,8 +32,8 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
   const messages = await getMessages();
   const t = locale === 'tr'
-    ? { home: 'anasayfa', about: 'hakkımda', work: 'deneyim', interests: 'ilgi alanları', volunteering: 'gönüllülük', blog: 'günlük', contact: 'iletişim' }
-    : { home: 'home', about: 'about', work: 'work', interests: 'interests', volunteering: 'volunteering', blog: 'blog', contact: 'contact' };
+    ? { home: 'anasayfa', about: 'hakkımda', work: 'deneyim', interests: 'ilgi alanları', volunteering: 'gönüllülük', contact: 'iletişim' }
+    : { home: 'home', about: 'about', work: 'work', interests: 'interests', volunteering: 'volunteering', contact: 'contact' };
 
   return (
     <html lang={locale}>
@@ -43,12 +43,11 @@ export default async function LocaleLayout({
             <span className="font-serif text-lg">melike arslan</span>
             <nav className="flex items-center gap-5 text-sm text-ink-soft">
               <a href={`/${locale}`}>{t.home}</a>
-              <a href={`/${locale}/about`}>{t.about}</a>
-              <a href={`/${locale}/work`}>{t.work}</a>
-              <a href={`/${locale}/interests`}>{t.interests}</a>
-              <a href={`/${locale}/volunteering`}>{t.volunteering}</a>
-              <a href={`/${locale}/blog`}>{t.blog}</a>
-              <a href={`/${locale}/contact`}>{t.contact}</a>
+              <a href={`/${locale}#about`}>{t.about}</a>
+              <a href={`/${locale}#experience`}>{t.work}</a>
+              <a href={`/${locale}#interests`}>{t.interests}</a>
+              <a href={`/${locale}#volunteering`}>{t.volunteering}</a>
+              <a href={`/${locale}#contact`}>{t.contact}</a>
               <LocaleSwitcher currentLocale={locale} />
             </nav>
           </header>
