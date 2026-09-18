@@ -8,14 +8,14 @@ export interface EducationItem {
 export const education: EducationItem[] = [
   {
     key: 'bulent-ecevit',
-    years: '2023 —',
+    years: '2022 — 2026',
     school: 'Bülent Ecevit Üniversitesi',
     field: { tr: 'Bilgisayar Mühendisliği · Zonguldak', en: 'Computer Engineering · Zonguldak' },
   },
   {
-    key: 'gulhane',
-    years: '2021 — 2023',
-    school: 'Sağlık Bilimleri Üniversitesi, Gülhane',
-    field: { tr: 'Hemşirelik (transfer öncesi) · Ankara', en: 'Nursing (before transferring) · Ankara' },
+    key: 'ankara-nursing',
+    years: '2020 — 2022',
+    school: 'Ankara Hemşirelik',
+    field: { tr: 'Hemşirelik · Ankara', en: 'Nursing · Ankara' },
   },
 ];
